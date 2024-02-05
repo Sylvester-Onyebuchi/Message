@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title class=>Mixed Message Generator</title>
+  <style>
+    body{
+  background-color: lightgrey;
+  text-align: center;
+}
+.b{
+  background-color: black;
+  color: white;
+  padding: 10px 10px;
+  font-weight: bold;
+}
+p{
+  font-size: large;
+  font-weight: bold;
+}
+  </style>
+</head>
+<body>
+
+  <h1>Mixed Message Random Generator</h1>
+  <p id="p"></p>
+  <button onclick="mixed()" class="b">Generate new message</button>
+  
+  <script>
+    function randomMessage(){
+ let word = ['Why don\'t scientists trust atoms? Because they make up everything!',
+'What did one wall say to the other wall? \"I\'ll meet you at the corner!\"', 
+'How do you organize a space party?You planet!', 'Why couldn\'t the bicycle stand up by itself? Because it was two-tired!'];
+  let random = Math.floor(Math.random() * word.length)
+  return word[random];
+}
+function mixed(){
+  document.getElementById('p').innerHTML = randomMessage();
+}
+
+  </script>
+  
+</body>
+</html>
